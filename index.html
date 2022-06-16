@@ -10,96 +10,61 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Weather Dashboard</title>
 </head>
+
 <body>
+
   <!-- Header -->
-  <header class="title is-flex is-justify-content-center m-4">
+  <header class="title is-flex is-justify-content-center">
     <h1>Weather Dashboard</h1>
   </header>
   <!-- End Header -->
 
   <main class="columns tile is-ancestor is-flex m-4">
+
     <!-- Search Section -->
     <div class="tile is-parent is-flex is-flex-direction-column notification is-primary column is-one-fifth m-4">
+     
       <!-- Search -->
-      <div class="tile is-child is-flex is-flex-direction-column ">
+      <form class="tile is-child is-flex is-flex-direction-column" id="search-form">
         <h2 class="is-flex is-justify-content-center">Search for a city</h2>
-        <textarea class="textarea has-fixed-size" rows="1"></textarea>
+        <textarea class="textarea has-fixed-size" rows="1" id="search-parameter"></textarea>
         <button class="button is-link is-outlined" type="submit">Search</button>
-      </div>
+      </form>
       <!-- End Search -->
 
       <!-- Recent Searches -->
       <div id="recent-searches" class="tile is-child is-flex is-flex-direction-column">
-        <button class="button is-info is-outlined">Paris</button>
-        <button class="button is-info is-outlined">Paris</button>
-
+        <!-- Recent Searches Loaded Data -->
       </div>
       <!-- End Recent Searches -->
+
     </div>
     <!-- End Search Section -->
     
     <div class="column is-four-fifths mr-4">
+
       <!-- Current Weather -->
-      <div class="tile is-parent notification is-info is-flex is-flex-direction-column is-outlined m-1">
-        <h3>Tuscany (05-15-1774)<p>icon</p></h3> <!-- City name + date -->
-        <p>Temp = 56degf</p> <!-- temp -->
-        <p>Wind = 330mph</p> <!-- wind -->
-        <p>Humidity = 67%</p> <!-- humidity -->
-        <div><p>UV Index = </p><button class="button is-success" disabled>.49</button></div> <!-- UV index -->
+      <div class="tile is-parent notification is-info is-flex is-flex-direction-column is-outlined mr-1">
+        <h3>Current Forecast: </h3>
+        <div id="current-forecast">
+          <!-- Current Forecast Generated Data -->
+        </div>
       </div>
       <!-- End Current Weather -->
       
       <!-- 5 Day Forecast -->
-      
       <div class="tile is-parent is-flex is-flex-direction-column notification is-primary my-4 mx-1">
         <div><h3>5-Day Forecast: </h3></div>
-        <div class="is-flex">
-          <div class="is-child notification is-warning my-4 mr-4">
-            <h3>(05-15-1774)</h3><!-- date -->
-            <p>icon</p> <!-- icon -->
-            <p>Temp = 56degf</p> <!-- temp -->
-            <p>Wind = 330mph</p> <!-- wind -->
-            <p>Humidity = 67%</p> <!-- humidity -->
-          </div>
-          <div class="is-child notification is-warning m-4">
-            <h3>(05-15-1774)</h3><!-- date -->
-            <p>icon</p> <!-- icon -->
-            <p>Temp = 56degf</p> <!-- temp -->
-            <p>Wind = 330mph</p> <!-- wind -->
-            <p>Humidity = 67%</p> <!-- humidity -->
-          </div>
-          <div class="is-child notification is-warning m-4">
-            <h3>(05-15-1774)</h3><!-- date -->
-            <p>icon</p> <!-- icon -->
-            <p>Temp = 56degf</p> <!-- temp -->
-            <p>Wind = 330mph</p> <!-- wind -->
-            <p>Humidity = 67%</p> <!-- humidity -->
-          </div>
-          <div class="is-child notification is-warning m-4">
-            <h3>(05-15-1774)</h3><!-- date -->
-            <p>icon</p> <!-- icon -->
-            <p>Temp = 56degf</p> <!-- temp -->
-            <p>Wind = 330mph</p> <!-- wind -->
-            <p>Humidity = 67%</p> <!-- humidity -->
-          </div>
-          <div class="is-child notification is-warning m-4">
-            <h3>(05-15-1774)</h3><!-- date -->
-            <p>icon</p> <!-- icon -->
-            <p>Temp = 56degf</p> <!-- temp -->
-            <p>Wind = 330mph</p> <!-- wind -->
-            <p>Humidity = 67%</p> <!-- humidity -->
-          </div>  
+        <div class="is-flex" id="five-day-data">
+          <!-- Five Day Forecast Generated Data -->  
         </div>
-      </div>  
+      </div> 
+      <!-- End 5 Day Forecast --> 
+
     </div>  
   </main>
 
-
-  
-  <!-- JS links -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="./assets/js/script.js"></script>
-  <!-- End JS links -->
+
 </body>
 </html>
