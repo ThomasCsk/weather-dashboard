@@ -23,3 +23,12 @@ h3 {
   padding: 30px;
   margin: 0;
 }
+
+@media screen and (max-width: 1375px) {
+  #five-day-data{
+    flex-direction: column;
+  }
+  main{
+    flex-direction: column;
+  }
+}
