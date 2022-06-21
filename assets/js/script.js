@@ -25,8 +25,8 @@ var recentlySearchedHandler = function(){
 }
 
 var getLocation = function(location){
-  var apiKey = 'AjnaBhW02abtslHZhIrbRlAV1U3-RLPBR0l2PUqu6ZnG2LGl0q8h-wr-F1wTDKpm';
-  var apiUrl = 'http://dev.virtualearth.net/REST/v1/Locations?query='+location+'&key='+apiKey;
+  var apiKey = '75cc5642ba9df026f6ee5cf9d995c9c4';
+  var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+location+'&appid='+apiKey;
 
   fetch(apiUrl)
   .then(function(response) {
@@ -39,8 +39,8 @@ var getLocation = function(location){
     }
   })
   .then(function(data) {
-    var latitude = data.resourceSets[0].resources[0].point.coordinates[0]
-    var longitude = data.resourceSets[0].resources[0].point.coordinates[1]
+    var latitude = data.coord.lat
+    var longitude = data.coord.lon
     getWeatherData(latitude,longitude,location);
   })
 }
